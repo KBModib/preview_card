@@ -1,0 +1,125 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(217, 54%, 11%);
+    overflow: hidden;
+}
+.card {
+    display: grid;
+    grid-template-columns: 380px;
+    grid-template-rows: 380px 180px 50px;
+    grid-template-areas: "image" "text" "line" "designer";
+
+    font-family: 'Outfit', sans-serif;
+    border-radius: 18px;
+    background: hsl(216, 50%, 16%);
+    box-shadow: 0 15px 15px 15px hsl(217, 71%, 9%);
+}
+.card-image {
+    grid-area: image;
+    background: url(images/image-equilibrium.jpg);
+    border-radius: 18px;
+    background-size: 100%;
+    margin: 18px;
+    align-items: center;
+}
+.image-overlay {
+    position: relative;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.eye {
+    padding: 150px;
+}
+.card-image .image-overlay{
+    position: relative;
+    left: 170px;
+    top: 170px;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+    border-radius: 18px;
+}
+.card-image:hover .image-overlay{
+    display: block;
+}
+.card-text {
+    grid-area: text;
+    margin: 20px;
+    margin-top: 8px;
+    font-family: 'Outfit', sans-serif;
+}
+.card-text h2 {
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    font-weight: 600;
+    display: inline-block;
+}
+h2:hover {
+        color: hsl(178, 100%, 50%);
+        cursor: pointer;
+}
+.card-text p {
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+    text-align: left;
+    font-weight: 400;
+}
+.price { 
+    color: hsl(178, 100%, 50%);
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+    padding-left: 10px;
+}
+.time {
+    color:hsl(215, 51%, 70%);
+    text-align: right; 
+    padding-left: 130px;
+    margin-right: 5px;
+    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+}
+hr {
+    grid-area: line;
+    margin: 20px;
+    border: none;
+    height: 2px;
+    background-color: hsl(215, 32%, 27%);
+}
+.card-designer {
+    grid-area: designer;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-bottom: 18px;
+    
+}
+.image {
+     height: 50px;
+     width: 50px;
+     border: 1px solid hsl(0, 0%, 100%);
+     border-radius: 50%;
+     margin-left: 30px;
+}
+.designer-name {
+    color:hsl(215, 51%, 70%);
+    align-items: left;
+    margin-right: 30px;
+}
+.author {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-weight: 400;
+}
+.author:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
